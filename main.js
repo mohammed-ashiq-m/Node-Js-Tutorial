@@ -9,3 +9,9 @@ http.createServer(function (req,res) {
 //here is the declaration of the port which u want to look
 
 console.log("server is successfully running at http://127.0.0.1:8081/ ")//server status at the run time
+
+
+var fs=require("fs")
+var data=fs.readFileSync('input.txt')
+console.log(data.toString());
+console.log('program ended');
