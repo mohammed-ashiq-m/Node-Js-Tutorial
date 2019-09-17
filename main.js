@@ -36,3 +36,34 @@ eventEmitter.on("data_received",function (){
 });
 eventEmitter.emit('connection');
 console.log('program ended');
+
+//***B U F F E R***//
+
+buf = new Buffer(256);
+len = buf.write("Simply Easy Learning");
+
+console.log("Octets written : "+  len);
+
+//****S E T - T I M E- O U T ****//
+
+function printHello() {
+    console.log( "Hello, World!");
+}
+
+// Now call above function after 2 seconds
+setTimeout(printHello, 2000);
+
+
+
+//**** S E T - I N T E R V E L ****//
+
+console.log("wait for the result it will show after 2 seconds")
+function printHello() {
+    console.log( "Hello, World!");
+}
+
+// Now call above function after 2 seconds
+var t=setInterval(printHello, 4000);
+
+//CLEAR-INTERVEL WILL STOP THE setIntervel object//
+clearInterval(t);
